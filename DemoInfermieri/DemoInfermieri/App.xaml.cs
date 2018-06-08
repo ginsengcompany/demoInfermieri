@@ -1,3 +1,4 @@
+using DemoInfermieri.Views;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -11,7 +12,7 @@ namespace DemoInfermieri
 		{
 			InitializeComponent();
 
-			MainPage = new MainPage();
+			MainPage = new Login();
 		}
 
 		protected override void OnStart ()

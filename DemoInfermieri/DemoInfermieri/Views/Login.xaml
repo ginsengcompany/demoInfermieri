@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:CostomControls="clr-namespace:DemoInfermieri.CustomLayout"
+             x:Class="DemoInfermieri.Views.Login">
+
+    <StackLayout WidthRequest="250" HorizontalOptions="Center">
+
+        <Frame  BackgroundColor="#4b8b80" 
+            CornerRadius="15"
+            HasShadow="True"
+            Margin="20,30,20,40">
+        
+        <StackLayout  Orientation="Vertical" VerticalOptions="CenterAndExpand" >
+            <CostomControls:CustomEntryCircle
+                CornerRadius="18" 
+                HeightRequest="50"
+                BorderWidth="3"
+                IsCurvedCornersEnabled="True" 
+                VerticalOptions="Center"
+                HorizontalTextAlignment="Center"   
+                Placeholder="Username"  
+                Text="{Binding _nomeUtente}"
+                x:Name="entryUserName"
+                PlaceholderColor="Gray"
+                TextColor="Black"  
+                FontAttributes="Bold">
+                
+            </CostomControls:CustomEntryCircle>
+                <CostomControls:CustomEntryCircle
+                CornerRadius="18" 
+                HeightRequest="50"
+                BorderWidth="3"
+                IsPassword="True"
+                IsCurvedCornersEnabled="True"
+                VerticalOptions="Center"
+                HorizontalTextAlignment="Center"
+                Placeholder="Password"  
+                Text="{Binding _password}" 
+                x:Name="entryPassword"
+                PlaceholderColor="Gray"
+                TextColor="Black"  
+                FontAttributes="Bold">
+
+                </CostomControls:CustomEntryCircle>
+
+                <StackLayout Orientation="Horizontal" VerticalOptions="End" HorizontalOptions="Center" >
+                    <Button BackgroundColor="White" WidthRequest="100" CornerRadius="10" Text="Login"></Button>
+                </StackLayout>
+        </StackLayout>
+        </Frame>
+        <StackLayout Padding="0,10,0,0">
+            <ProgressBar x:Name="Load"  
+                         IsEnabled="False" 
+                         IsVisible="False" 
+                         WidthRequest="300" 
+                         HeightRequest="25" 
+                         VerticalOptions="Center" 
+                         HorizontalOptions="Center" 
+                         />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
