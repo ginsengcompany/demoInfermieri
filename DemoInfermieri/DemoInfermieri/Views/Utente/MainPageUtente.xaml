@@ -11,6 +11,7 @@
                 Text="Logout" 
                 Priority="0"
                 Icon="logout.png"
+                Command="{Binding logout}"
                 />
 
         </ContentPage.ToolbarItems>

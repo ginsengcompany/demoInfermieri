@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DemoInfermieri.ModelView;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,10 +12,13 @@ namespace DemoInfermieri.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class MainPageUtente : ContentPage
-	{
-		public MainPageUtente ()
+    {
+        private MainPageModelView z;
+        public MainPageUtente ()
 		{
 			InitializeComponent ();
-		}
+            z = new MainPageModelView(this);
+            BindingContext = z;
+        }
 	}
 }

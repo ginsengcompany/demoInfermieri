@@ -8,14 +8,15 @@ using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
 
-namespace DemoInfermieri.ModelView.Infermiere
+namespace DemoInfermieri.ModelView
 {
-    class MainPageInfermiereModelView : INotifyPropertyChanged
+    class MainPageModelView : INotifyPropertyChanged
     {
         #region DichiarazioneVariabili
         //Command utilizzato per il tentativo di accesso ai servizi da parte dell'utente
         public ICommand tapCalendario { protected set; get; }
         public ICommand tapAppuntamenti { protected set; get; }
+        public ICommand logout { protected set; get; }
 
         public event PropertyChangedEventHandler PropertyChanged; //evento che implementa l'interfaccia INotifyPropertyChanged
         #endregion
@@ -24,7 +25,7 @@ namespace DemoInfermieri.ModelView.Infermiere
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
-        public MainPageInfermiereModelView(MainPageInfermiere MainPage)
+        public MainPageModelView(MainPageInfermiere MainPage)
         {
             tapCalendario = new Command(async () =>
             {
@@ -33,6 +34,25 @@ namespace DemoInfermieri.ModelView.Infermiere
             tapAppuntamenti = new Command(async () =>
             {
                 await App.Current.MainPage.Navigation.PushAsync(new AppuntamentiInfermieri());
+            });
+            logout = new Command(async () =>
+            {
+                 App.Current.MainPage = new Login ();
+            });
+        }
+        public MainPageModelView(MainPageUtente MainPage)
+        {
+            tapCalendario = new Command(async () =>
+            {
+                await App.Current.MainPage.Navigation.PushAsync(new CalendarioInfermiere());
+            });
+            tapAppuntamenti = new Command(async () =>
+            {
+                await App.Current.MainPage.Navigation.PushAsync(new AppuntamentiInfermieri());
+            });
+            logout = new Command(async () =>
+            {
+                App.Current.MainPage = new Login();
             });
         }
     }
