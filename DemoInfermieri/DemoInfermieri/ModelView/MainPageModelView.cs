@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Windows.Input;
+using DemoInfermieri.Views.Utente;
 using Xamarin.Forms;
 
 namespace DemoInfermieri.ModelView
@@ -48,7 +49,7 @@ namespace DemoInfermieri.ModelView
             });
             tapAppuntamenti = new Command(async () =>
             {
-                await App.Current.MainPage.Navigation.PushAsync(new AppuntamentiInfermieri());
+                await App.Current.MainPage.Navigation.PushAsync(new RicercaInfermieriPage());
             });
             logout = new Command(async () =>
             {
