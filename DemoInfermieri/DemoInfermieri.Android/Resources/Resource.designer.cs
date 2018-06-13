@@ -2396,26 +2396,26 @@ namespace DemoInfermieri.Droid
 			// aapt resource value: 0x7f020054
 			public const int avd_hide_password = 2130837588;
 			
-			// aapt resource value: 0x7f020148
-			public const int avd_hide_password_1 = 2130837832;
-			
-			// aapt resource value: 0x7f020149
-			public const int avd_hide_password_2 = 2130837833;
-			
 			// aapt resource value: 0x7f02014a
-			public const int avd_hide_password_3 = 2130837834;
+			public const int avd_hide_password_1 = 2130837834;
+			
+			// aapt resource value: 0x7f02014b
+			public const int avd_hide_password_2 = 2130837835;
+			
+			// aapt resource value: 0x7f02014c
+			public const int avd_hide_password_3 = 2130837836;
 			
 			// aapt resource value: 0x7f020055
 			public const int avd_show_password = 2130837589;
 			
-			// aapt resource value: 0x7f02014b
-			public const int avd_show_password_1 = 2130837835;
-			
-			// aapt resource value: 0x7f02014c
-			public const int avd_show_password_2 = 2130837836;
-			
 			// aapt resource value: 0x7f02014d
-			public const int avd_show_password_3 = 2130837837;
+			public const int avd_show_password_1 = 2130837837;
+			
+			// aapt resource value: 0x7f02014e
+			public const int avd_show_password_2 = 2130837838;
+			
+			// aapt resource value: 0x7f02014f
+			public const int avd_show_password_3 = 2130837839;
 			
 			// aapt resource value: 0x7f020056
 			public const int common_full_open_on_phone = 2130837590;
@@ -2475,25 +2475,25 @@ namespace DemoInfermieri.Droid
 			public const int common_google_signin_btn_text_light_normal_background = 2130837608;
 			
 			// aapt resource value: 0x7f020069
-			public const int contatti = 2130837609;
+			public const int design_bottom_navigation_item_background = 2130837609;
 			
 			// aapt resource value: 0x7f02006a
-			public const int design_bottom_navigation_item_background = 2130837610;
+			public const int design_fab_background = 2130837610;
 			
 			// aapt resource value: 0x7f02006b
-			public const int design_fab_background = 2130837611;
+			public const int design_ic_visibility = 2130837611;
 			
 			// aapt resource value: 0x7f02006c
-			public const int design_ic_visibility = 2130837612;
+			public const int design_ic_visibility_off = 2130837612;
 			
 			// aapt resource value: 0x7f02006d
-			public const int design_ic_visibility_off = 2130837613;
+			public const int design_password_eye = 2130837613;
 			
 			// aapt resource value: 0x7f02006e
-			public const int design_password_eye = 2130837614;
+			public const int design_snackbar_background = 2130837614;
 			
 			// aapt resource value: 0x7f02006f
-			public const int design_snackbar_background = 2130837615;
+			public const int disponibilita = 2130837615;
 			
 			// aapt resource value: 0x7f020070
 			public const int googleg_disabled_color_18 = 2130837616;
@@ -3125,11 +3125,11 @@ namespace DemoInfermieri.Droid
 			// aapt resource value: 0x7f020141
 			public const int notification_icon_background = 2130837825;
 			
-			// aapt resource value: 0x7f020146
-			public const int notification_template_icon_bg = 2130837830;
+			// aapt resource value: 0x7f020148
+			public const int notification_template_icon_bg = 2130837832;
 			
-			// aapt resource value: 0x7f020147
-			public const int notification_template_icon_low_bg = 2130837831;
+			// aapt resource value: 0x7f020149
+			public const int notification_template_icon_low_bg = 2130837833;
 			
 			// aapt resource value: 0x7f020142
 			public const int notification_tile_bg = 2130837826;
@@ -3138,10 +3138,16 @@ namespace DemoInfermieri.Droid
 			public const int notify_panel_notification_icon_bg = 2130837827;
 			
 			// aapt resource value: 0x7f020144
-			public const int tooltip_frame_dark = 2130837828;
+			public const int profilo = 2130837828;
 			
 			// aapt resource value: 0x7f020145
-			public const int tooltip_frame_light = 2130837829;
+			public const int richieste = 2130837829;
+			
+			// aapt resource value: 0x7f020146
+			public const int tooltip_frame_dark = 2130837830;
+			
+			// aapt resource value: 0x7f020147
+			public const int tooltip_frame_light = 2130837831;
 			
 			static Drawable()
 			{

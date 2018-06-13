@@ -15,8 +15,12 @@ namespace DemoInfermieri.ModelView
     {
         #region DichiarazioneVariabili
         //Command utilizzato per il tentativo di accesso ai servizi da parte dell'utente
-        public ICommand tapCalendario { protected set; get; }
+        public ICommand tapDisponibilità { protected set; get; }
         public ICommand tapAppuntamenti { protected set; get; }
+        public ICommand tapRichieste { protected set; get; }
+        public ICommand tapProfilo { protected set; get; }
+
+         
         public ICommand logout { protected set; get; }
 
         public event PropertyChangedEventHandler PropertyChanged; //evento che implementa l'interfaccia INotifyPropertyChanged
@@ -28,13 +32,21 @@ namespace DemoInfermieri.ModelView
         }
         public MainPageModelView(MainPageInfermiere MainPage)
         {
-            tapCalendario = new Command(async () =>
+            tapDisponibilità = new Command(async () =>
             {
               await  App.Current.MainPage.Navigation.PushAsync (new CalendarioInfermiere()) ;
             });
             tapAppuntamenti = new Command(async () =>
             {
                 await App.Current.MainPage.Navigation.PushAsync(new AppuntamentiInfermieri());
+            });
+            tapRichieste = new Command(async () =>
+            {
+
+            });
+            tapProfilo = new Command(async () =>
+            {
+
             });
             logout = new Command(async () =>
             {
@@ -43,7 +55,7 @@ namespace DemoInfermieri.ModelView
         }
         public MainPageModelView(MainPageUtente MainPage)
         {
-            tapCalendario = new Command(async () =>
+            tapDisponibilità = new Command(async () =>
             {
                 await App.Current.MainPage.Navigation.PushAsync(new RichiestaUrgenza());
             });

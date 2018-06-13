@@ -41,37 +41,67 @@
                         <ColumnDefinition Width="*"></ColumnDefinition>
                         <ColumnDefinition Width="*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                        <StackLayout Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="Center">
+                        
+                        <StackLayout Grid.Row="0" Grid.Column="0" HorizontalOptions="Center">
                             <Image 
-                                x:Name="tapIconaRubrica" 
-                                Source="contatti.png" 
+                                Source="disponibilita.png" 
                                 WidthRequest="100"
                                 HeightRequest="100"
                                 HorizontalOptions="Center"
                                 >
                                 <Image.GestureRecognizers>
                                     <TapGestureRecognizer
-                                        Command="{Binding tapCalendario}"
+                                        Command="{Binding tapDisponibilità}"
                                         NumberOfTapsRequired="1"
                                         />
                                 </Image.GestureRecognizers> 
                             </Image>
                         </StackLayout>
-                        <StackLayout Grid.Row="0" Grid.ColumnSpan="2" Grid.Column="1" HorizontalOptions="Center">
-                        <Image 
-                                x:Name="tapIconaAppuntamenti" 
-                                Source="appuntamenti.png" 
+
+                    <StackLayout Grid.Row="0" Grid.Column="1" HorizontalOptions="Center">
+                        <Image  
+                                Source="richieste.png" 
                                 WidthRequest="100"
                                 HeightRequest="100"
                                 HorizontalOptions="Center">
                             <Image.GestureRecognizers>
                                 <TapGestureRecognizer
-                                        Command="{Binding tapAppuntamenti}"
+                                        Command="{Binding tapRichieste}"
                                         NumberOfTapsRequired="1"
                                         />
                             </Image.GestureRecognizers>
                         </Image>
-                        </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="1" Grid.Column="0" HorizontalOptions="Center">
+                        <Image  
+                                Source="profilo.png" 
+                                WidthRequest="100"
+                                HeightRequest="100"
+                                HorizontalOptions="Center">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer
+                                        Command="{Binding tapProfilo}"
+                                        NumberOfTapsRequired="1"
+                                        />
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </StackLayout>
+                    <StackLayout Grid.Row="1" Grid.Column="1" HorizontalOptions="Center">
+                                <Image  
+                                Source="appuntamenti.png" 
+                                WidthRequest="100"
+                                HeightRequest="100"
+                                HorizontalOptions="Center">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer
+                                        Command="{Binding tapAppuntamenti}"
+                                        NumberOfTapsRequired="1"
+                                        />
+                                    </Image.GestureRecognizers>
+                                </Image>
+                    </StackLayout>
+                        
                     </Grid>
                 </ScrollView>
             </StackLayout>
