@@ -2,22 +2,75 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DemoInfermieri.Views.Infermere.CalendarioInfermiere"
+             xmlns:CostomControls="clr-namespace:DemoInfermieri.CustomLayout"
+             xmlns:Colori="clr-namespace:DemoInfermieri.Model"
              Title="CALENDARIO">
     <ContentPage.Content>
+
         <StackLayout>
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <StackLayout Grid.Column="0" Grid.Row="0" BackgroundColor="Red">
-                    <Label Text="PROVA" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White" FontAttributes="Bold"/>
+                <StackLayout Grid.Column="0" Grid.Row="0" VerticalOptions="Start">
+                    <DatePicker VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
                 </StackLayout>
-                <StackLayout Grid.Column="0" Grid.Row="1" BackgroundColor="Red">
-                    <Label Text="PROVA" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White" FontAttributes="Bold"/>
+                <StackLayout Grid.Column="0" Grid.Row="1" BackgroundColor="{x:Static Colori:Colori.baseInfermieri}">
+                    <Label Text="DATA SELEZIONATA" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout Grid.Column="0" Grid.Row="2">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="2*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Text="ORA" Grid.Row="0" Grid.Column="0"/>
+                        <Label Text="DISPONIBILITA'" Grid.Row="0" Grid.Column="1"/>
+
+                        <Label Text="08:00" Grid.Row="1" Grid.Column="0"/>
+                        <Label Text="DISPONIBILE" Grid.Row="1" Grid.Column="1"/>
+
+                        <Label Text="09:00" Grid.Row="2" Grid.Column="0"/>
+                        <Label Text="NON DISPONIBILE" Grid.Row="2" Grid.Column="1"/>
+
+                        <Label Text="10:00" Grid.Row="3" Grid.Column="0"/>
+                        <Label Text="DISPONIBILE" Grid.Row="3" Grid.Column="1"/>
+
+                        <Label Text="11:00" Grid.Row="4" Grid.Column="0"/>
+                        <Label Text="DISPONIBILE" Grid.Row="4" Grid.Column="1"/>
+
+                        <Label Text="12:00" Grid.Row="5" Grid.Column="0"/>
+                        <Label Text="DISPONIBILE" Grid.Row="5" Grid.Column="1"/>
+
+                        <Label Text="13:00" Grid.Row="6" Grid.Column="0"/>
+                        <Label Text="DISPONIBILE" Grid.Row="6" Grid.Column="1"/>
+
+                        <Label Text="14:00" Grid.Row="7" Grid.Column="0"/>
+                        <Label Text="DISPONIBILE" Grid.Row="7" Grid.Column="1"/>
+
+                        <Label Text="15:00" Grid.Row="8" Grid.Column="0"/>
+                        <Label Text="DISPONIBILE" Grid.Row="8" Grid.Column="1"/>
+
+                        <Label Text="16:00" Grid.Row="9" Grid.Column="0"/>
+                        <Label Text="DISPONIBILE" Grid.Row="9" Grid.Column="1"/>
+
+                    </Grid>
                 </StackLayout>
             </Grid>
         </StackLayout>

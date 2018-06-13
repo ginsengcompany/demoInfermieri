@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-              xmlns:CostomControls="clr-namespace:DemoInfermieri.CustomLayout"
+             xmlns:CostomControls="clr-namespace:DemoInfermieri.CustomLayout"
+             xmlns:Colori="clr-namespace:DemoInfermieri.Model"
              x:Class="DemoInfermieri.Views.Login">
 
     <StackLayout WidthRequest="250" HorizontalOptions="Center" Padding="20,0,0,0">
@@ -9,7 +10,7 @@
             Source="logo.png"
             />
 
-        <Frame  BackgroundColor="#60E807" 
+        <Frame  BackgroundColor="{x:Static Colori:Colori.baseInfermieri}" 
             CornerRadius="15"
             HasShadow="True"
             Margin="20,30,20,40">

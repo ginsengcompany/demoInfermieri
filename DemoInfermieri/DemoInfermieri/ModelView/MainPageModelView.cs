@@ -45,7 +45,7 @@ namespace DemoInfermieri.ModelView
         {
             tapCalendario = new Command(async () =>
             {
-                await App.Current.MainPage.Navigation.PushAsync(new CalendarioInfermiere());
+                await App.Current.MainPage.Navigation.PushAsync(new RichiestaUrgenza());
             });
             tapAppuntamenti = new Command(async () =>
             {
