@@ -1,12 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DemoInfermieri.Views.Profilo">
+             x:Class="DemoInfermieri.Views.Profilo" BackgroundColor="White" Title="Profilo">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            
+            <StackLayout Padding="20" VerticalOptions="StartAndExpand">
+                <Image Source="accountIcon.png" HorizontalOptions="Center"></Image>
+                <Grid BackgroundColor="Black" HorizontalOptions="CenterAndExpand" Padding="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <StackLayout BackgroundColor="LightGray" Grid.Row="0">
+                        <Label Text="Alessio" HorizontalOptions="CenterAndExpand" TextColor="Black" FontSize="Large"/>
+                    </StackLayout>
+                    <StackLayout BackgroundColor="White" Grid.Row="1">
+                        <Label Text="Rivoli" HorizontalOptions="Center" FontSize="Large"></Label>
+                    </StackLayout>
+                    <StackLayout BackgroundColor="LightGray" Grid.Row="2">
+                        <Label Text="31/07/1992" HorizontalOptions="Center" TextColor="Black" FontSize="Large"></Label>
+                    </StackLayout>
+                    <StackLayout BackgroundColor="White" Grid.Row="3">
+                        <Label Text="RVLLLSGAY92FG3983V" HorizontalOptions="Center"  FontSize="Large"></Label>
+                    </StackLayout>
+                    <StackLayout BackgroundColor="LightGray" Grid.Row="4">
+                        <Label Text="Via de lauzieres 2" HorizontalOptions="Center" TextColor="Black" FontSize="Large"></Label>
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+          
+            
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
