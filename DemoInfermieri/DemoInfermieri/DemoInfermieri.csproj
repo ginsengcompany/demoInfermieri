@@ -12,7 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ModelView\Infermiere\" />
     <Folder Include="ModelView\Utente\" />
   </ItemGroup>
 

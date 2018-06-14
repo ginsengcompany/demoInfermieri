@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DemoInfermieri.ModelView.Infermiere;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,14 @@ namespace DemoInfermieri.Views.Infermere
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class CalendarioInfermiere : ContentPage
 	{
-		public CalendarioInfermiere ()
+        private CalendarioInfermiereModelView z;
+
+        public CalendarioInfermiere ()
 		{
 			InitializeComponent ();
-		}
+            z = new CalendarioInfermiereModelView(this);
+            BindingContext = z;
+            z.CreaGrid(gridOrari);
+        }
 	}
 }
