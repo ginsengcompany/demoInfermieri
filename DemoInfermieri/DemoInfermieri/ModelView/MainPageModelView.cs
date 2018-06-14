@@ -46,7 +46,7 @@ namespace DemoInfermieri.ModelView
             });
             tapProfilo = new Command(async () =>
             {
-
+                await App.Current.MainPage.Navigation.PushAsync(new Profilo());
             });
             logout = new Command(async () =>
             {
@@ -62,6 +62,10 @@ namespace DemoInfermieri.ModelView
             tapAppuntamenti = new Command(async () =>
             {
                 await App.Current.MainPage.Navigation.PushAsync(new RicercaInfermieriPage());
+            });
+            tapProfilo = new Command(async () =>
+            {
+                await App.Current.MainPage.Navigation.PushAsync(new Profilo());
             });
             logout = new Command(async () =>
             {

@@ -61,19 +61,39 @@ namespace DemoInfermieri.ModelView.Infermiere
                 };
                 Label disponibilità = new Label
                 {
-                    Text = "Disponibile",
-                    TextColor = Color.Green,
+                    Text = "Non Disponibile",
+                    TextColor = Color.Red,
                     FontAttributes = FontAttributes.Bold,
                     HorizontalOptions = LayoutOptions.CenterAndExpand
                 };
                 Switch switchDisponibilità = new Switch
                 {
-
+                    IsToggled = false
                 };
+
+                switchDisponibilità.Toggled += switcher_Toggled;
+
+                void switcher_Toggled(object sender, ToggledEventArgs e)
+                {
+                    var x = sender as Switch;
+                    string scelta = x.IsToggled.ToString();
+                    if (x.IsToggled)
+                    {
+                        disponibilità.Text = "Disponibile";
+                        disponibilità.TextColor = Color.Green;
+                    }
+                        
+                    else{
+                        disponibilità.Text = "Non Disponibile";
+                        disponibilità.TextColor = Color.Red;
+                    }
+                        
+                }
                 grid.Children.Add(ora,0,i);
                 grid.Children.Add(disponibilità, 1, i);
                 grid.Children.Add(switchDisponibilità, 2, i);
             }
         }
+        
     }
 }
