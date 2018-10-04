@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using Syncfusion.XForms.iOS.DataForm;
 using UIKit;
 
 namespace DemoInfermieri.iOS
@@ -23,6 +24,7 @@ namespace DemoInfermieri.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+            SfDataFormRenderer.Init();
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

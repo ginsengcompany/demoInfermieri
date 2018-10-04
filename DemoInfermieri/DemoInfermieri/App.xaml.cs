@@ -11,8 +11,9 @@ namespace DemoInfermieri
 		public App ()
 		{
 			InitializeComponent();
+		    Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("Mjk3NzdAMzEzNjJlMzMyZTMwQXRHYmpuSDdrK1U5bkhzN0E3UFpBaXc1d0JJUTR0SWRYOWdDZzF1OWMrUT0=");
 
-			MainPage = new Login();
+            MainPage = new Registrazione();
 		}
 
 		protected override void OnStart ()
